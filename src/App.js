@@ -50,19 +50,20 @@ function App() {
       }
       setPrompts(newState);
       // console.log(newState);
-      const randomizer = (newState) => {
     
-    
-      const randomIndex = Math.floor(Math.random() * newState.length);
-      console.log(randomIndex);
-            // e.preventDefault();
-    
-        }
-      
     });
-
+    
   }, [])
+  
+  const randomizer = () => {
+    // variable with random index number, based on array length
+    const randomIndex = Math.floor(Math.random() * prompts.length);
+      console.log(randomIndex);  // ✅
 
+      console.log(prompts[randomIndex]); // gives us the writing prompt, based on index number ✅
+
+      return prompts[randomIndex]
+  }
 
   return (
     <div className="App">
@@ -84,24 +85,9 @@ function App() {
         <button type="submit" onClick={handlePromptClick}>Add a writing prompt</button>
         </form>
         <button type="submit" onClick={randomizer}>Ask for a prompt</button>
-
-        {/* <button
-        onClick={() => {
-          newState.Math.floor(Math.random() * newState.length);
-        }}
-      >
-        Generate random number!
-      </button> */}
-
-        <ul>
-          {prompts.map((prompt) => {
-            return (
-              <li>
-                <p>{prompt}</p>
-              </li>
-            )
-          })}
-        </ul>
+        <p>
+          {randomizer}
+        </p>
 
 
       <div className="text-box">
