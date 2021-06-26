@@ -1,6 +1,3 @@
-
-
-
 import './App.css';
 import { faClock, faFile, faStar, faSun } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,6 +17,22 @@ function App() {
       <input type="text" placeholder="Tell me about your day" />
     </label>
   </form>
+
+
+  <div className="icons">
+    <FontAwesomeIcon className='clock' icon ={faClock} />
+   
+    <FontAwesomeIcon className='pen' icon ={faPen}
+   />
+
+   <FontAwesomeIcon className='page' icon ={faFile}
+   />
+
+   <FontAwesomeIcon className='sun' icon ={faSun}
+   />
+   
+  </div>
+
 
 
 
