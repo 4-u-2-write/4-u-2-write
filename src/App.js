@@ -19,10 +19,11 @@ function App() {
 <form>
   <label>
     <FontAwesomeIcon className='star' icon ={faStar} />
-      <input type="text" placeholder="Tell me about your day" value="{}"/>
+      <input type="text" placeholder="Tell me about your day"/>
     </label>
-    <button type="submit" value="{}"></button>
+    <button type="submit"></button>
   </form>
+
   <ul>
     {prompts.map((prompt) => {
       return (
@@ -30,7 +31,7 @@ function App() {
           <p>{prompt}</p>
         </li>
       )
-    })}
+    }), []}
   </ul>
 
   <div className="icons">
