@@ -53,47 +53,6 @@ function App() {
     <div className="App">
 
       <h1>Bootcamp Diaries</h1>
-<form>
-  <label>
-    <FontAwesomeIcon className='star' icon ={faStar} />
-      <input type="text" placeholder="Tell me about your day"/>
-    </label>
-    <button type="submit"></button>
-  </form>
-
-  <ul>
-    {prompts.map((prompt) => {
-      return (
-        <li>
-          <p>{prompt}</p>
-        </li>
-      )
-    }), []}
-  </ul>
-
-  <div className="icons">
-    <FontAwesomeIcon className='clock' icon ={faClock} />
-   
-    <FontAwesomeIcon className='pen' icon ={faPen}
-   />
-
-   <FontAwesomeIcon className='page' icon ={faFile}
-   />
-
-   <FontAwesomeIcon className='sun' icon ={faSun}
-   />
-   
-  </div>
-
-
-
-
-<div className="text-box">
-  <textarea id="story" name="story"placeholder="Start writing here...."
-          rows="25" cols="75">
-              
-  </textarea>
-</div>    
 
 
       <form>
