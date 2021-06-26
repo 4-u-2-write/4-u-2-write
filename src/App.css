@@ -11,6 +11,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 
+
 body {
     background-color: #23395b;
 }
@@ -58,11 +59,28 @@ textarea {
 
 }
 
-.star {
-    color: gold;
-    
-    
+label .star {
+    position: relative;
 }
+
+.star {
+    color: #EAE5E9;
+    position: absolute;
+    left: 8%;
+}
+
+.icons {
+    width: 250px;
+    border-radius: 40px;
+    border: 1px solid #EAE5E9;
+    padding: 20px;
+    transform: rotate(90deg);
+    float: right;
+    position: relative;
+    top: 300px; 
+}
+
+
 
 
 

@@ -1,6 +1,12 @@
+
+
+
 import './App.css';
-import { faStar } from '@fortawesome/free-regular-svg-icons';
+import { faClock, faFile, faStar, faSun } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPen } from '@fortawesome/free-solid-svg-icons';
+
+
 
 function App() {
   return (
@@ -10,19 +16,19 @@ function App() {
 
 <form>
   <label>
-    <FontAwesomeIcon className='star' icon={faStar} />
+    <FontAwesomeIcon className='star' icon ={faStar} />
       <input type="text" placeholder="Tell me about your day" />
     </label>
   </form>
 
 
+
 <div className="text-box">
   <textarea id="story" name="story"placeholder="Start writing here...."
           rows="25" cols="75">
+              
   </textarea>
 </div>    
-
-
 
 
 
