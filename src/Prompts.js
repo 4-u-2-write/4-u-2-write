@@ -5,7 +5,7 @@ import { faStar } from '@fortawesome/free-regular-svg-icons';
 
 
 
-function Prompts() {
+const Prompts = () => {
 
   const [prompts, setPrompts] = useState([]);
   const [userPromptInput, setUserPromptInput] = useState('');
