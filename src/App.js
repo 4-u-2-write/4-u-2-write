@@ -1,7 +1,6 @@
 
 import Timer from './Timer';
 import { TimeForm } from './Timer';
-
 import './App.css';
 import { faClock, faFile, faStar, faSun } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,9 +11,12 @@ import { useEffect, useState } from 'react';
 
 
 
+
+
 function App() {
   const [prompts, setPrompts] = useState([]);
   const [userPromptInput, setUserPromptInput] = useState('');
+  const [displayPrompt, setDisplayPrompt] = useState('');
 
   // event listener functions 
   // 1. user typing in text input
@@ -25,11 +27,11 @@ function App() {
   // 2. click on button
   const handlePromptClick = (e) => {
     e.preventDefault();
-
-    const dbRefPrompts = firebase.database().ref('/Prompts');
-
-    dbRefPrompts.push(userPromptInput);
-
+  // Check for empty input before adding to database
+    if (userPromptInput !== "") {
+      const dbRefPrompts = firebase.database().ref('/Prompts');
+      dbRefPrompts.push(userPromptInput);
+    }
     setUserPromptInput('');
   }
 
@@ -58,12 +60,9 @@ function App() {
   const randomizer = () => {
     // variable with random index number, based on array length
     const randomIndex = Math.floor(Math.random() * prompts.length);
-      console.log(randomIndex);  // ✅
-
-      console.log(prompts[randomIndex]); // gives us the writing prompt, based on index number ✅
-
-      return prompts[randomIndex]
-  }
+    setDisplayPrompt(prompts[randomIndex]);
+    return displayPrompt;
+    }
 
   return (
     <div className="App">
@@ -85,8 +84,8 @@ function App() {
         <button type="submit" onClick={handlePromptClick}>Add a writing prompt</button>
         </form>
         <button type="submit" onClick={randomizer}>Ask for a prompt</button>
-        <p>
-          {randomizer}
+        <p> 
+          {displayPrompt}
         </p>
 
 
