@@ -105,14 +105,11 @@ function App() {
 
         </form>
 
-         <p>
-          {randomizer()}
 
         <p> 
           {displayPrompt}
-
         </p>
-        {/* <button type="submit" onClick={randomizer}>Ask for a prompt</button> */}
+
         
       
       <div className="icons">
@@ -139,9 +136,9 @@ function App() {
         </textarea>
       </div>    
 
-
     </div>
+
   );
-}
+
 
 export default App;
