@@ -10,17 +10,10 @@ import { useEffect, useState } from 'react';
 
 
 
-
-
-
 function App() {
   const [prompts, setPrompts] = useState([]);
   const [userPromptInput, setUserPromptInput] = useState('');
-
-  
-
   const [displayPrompt, setDisplayPrompt] = useState('');
-
 
   // event listener functions 
   // 1. user typing in text input
@@ -62,26 +55,11 @@ function App() {
   }, [])
   
   const randomizer = () => {
-    // e.preventDefault();
-
-  
-  
     // variable with random index number, based on array length
     const randomIndex = Math.floor(Math.random() * prompts.length);
-
-  
-      console.log(randomIndex);  // ✅
-
-      console.log(prompts[randomIndex]); // gives us the writing prompt, based on index number ✅
-    
-
-      return prompts[randomIndex]
-
-  }
     setDisplayPrompt(prompts[randomIndex]);
     return displayPrompt;
     }
-
 
   return (
     <div className="App">
@@ -101,18 +79,13 @@ function App() {
             />
           </label>
         <button type="submit" onClick={handlePromptClick}>Add a writing prompt</button>
-        <button type="submit" onClick={randomizer}>Ask for a prompt</button>
-
         </form>
-
-
+        <button type="submit" onClick={randomizer}>Ask for a prompt</button>
         <p> 
           {displayPrompt}
         </p>
 
-        
-      
-      <div className="icons">
+        <div className="icons">
     <FontAwesomeIcon className='clock' size='2x' icon ={faClock} />
 
   
@@ -129,16 +102,14 @@ function App() {
 
 
 
-
-
       <div className="text-box">
         <textarea id="story" name="story"placeholder="Start writing here...." rows="25" cols="75">
         </textarea>
       </div>    
 
+
     </div>
-
   );
-
+}
 
 export default App;
