@@ -2,7 +2,7 @@
 import Timer from './Timer';
 import { TimeForm } from './Timer';
 import './App.css';
-import { faClock, faFile, faStar, faSun } from '@fortawesome/free-regular-svg-icons';
+import { faClock, faFile, faSave, faStar, faSun } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import firebase from './firebase';
@@ -85,18 +85,18 @@ function App() {
           {displayPrompt}
         </p>
 
-        <div className="icons">
+  <div className="icons">
     <FontAwesomeIcon className='clock' size='2x' icon ={faClock} />
 
   
-    <FontAwesomeIcon className='pen' size='2x' icon ={faPen}
-    />
+    <FontAwesomeIcon className='pen' size='2x' icon ={faPen} />
 
-  <FontAwesomeIcon className='page' size='2x' icon ={faFile}
-  />
+    <FontAwesomeIcon className='page' size='2x' icon ={faFile} />
 
-  <FontAwesomeIcon className='sun' size='2x' icon ={faSun}
-  />
+    <FontAwesomeIcon className='sun' size='2x' icon ={faSun} />
+
+    <FontAwesomeIcon className='save' size='2x' icon ={faSave} />
+
   
   </div>
 
