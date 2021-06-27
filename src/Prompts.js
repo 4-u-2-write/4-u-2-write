@@ -1,40 +1,84 @@
-import {useState, useEffect} from 'react';
-import firebase from './firebase';
-const Prompts = () => {
-  const [displayPrompt, setDisplayPrompt] = useState([]);
-  const [userPrompt, setUserPrompt] = useState('');
+import firebase from "./firebase";
+import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from '@fortawesome/free-regular-svg-icons';
 
+
+
+function Prompts() {
+
+  const [prompts, setPrompts] = useState([]);
+  const [userPromptInput, setUserPromptInput] = useState('');
+  const [displayPrompt, setDisplayPrompt] = useState('');
+
+  const handlePromptChange = (e) => {
+      setUserPromptInput(e.target.value);
+    }
+
+    // 2. click on button
+  const handlePromptClick = (e) => {
+    e.preventDefault();
+  // Check for empty input before adding to database
+    if (userPromptInput !== "") {
+      const dbRefPrompts = firebase.database().ref('/Prompts');
+      dbRefPrompts.push(userPromptInput);
+    }
+    setUserPromptInput('');
+  }
 
   useEffect(() => {
-    // database references
+    // ref to firebase with nested prompts data
     const dbRefPrompts = firebase.database().ref('/Prompts');
-    
-    
-    //pulls object: book1, book2, etc from firebase
-    dbRefPrompts.on('value', (response) => {
-      // new var to hold the new state
-      const newState = [];
-      // store the response from firebase to promptData
-      // and use .val() to get the info for us
-      const promptData = response.val();
-      // iterate through promptData to get each title
-      for(let key in promptData) {
-        // push each title to userPrompt array
-        newState.push({key: key, name: promptData[key]});
-        // use setUserPrompt to update our state
-      }      
-      setUserPrompt(newState);
-      console.log(newState);
-      
-    })
 
-  })
-  return (
-    <section>
-      Promptsmap()
-      <p>Here's our data: </p>
-    </section>
-  )
+    dbRefPrompts.on('value', (response) => {
+      // console.log(response.val());
+      const newState = [];
+
+      const promptData = response.val();
+
+      for (let key in promptData) {
+        newState.push(promptData[key]);
+      }
+      setPrompts(newState);
+      // console.log(newState);
+    
+    });
+
+    
+  }, [])
+
+
+
+  const randomizer = () => {
+    // variable with random index number, based on array length
+    const randomIndex = Math.floor(Math.random() * prompts.length);
+    setDisplayPrompt(prompts[randomIndex]);
+    return displayPrompt;
+    }
+
+    return (
+      <>
+      <form>
+        <label htmlFor="newPrompt">
+          <FontAwesomeIcon className='star' icon ={faStar} />
+            <input 
+              type="text" 
+              id="newPrompt"
+              placeholder="Submit a writing prompt for the community!" 
+              onChange={handlePromptChange}
+              value={userPromptInput}
+            />
+          </label>
+        <button type="submit" onClick={handlePromptClick}>Add a writing prompt</button>
+        </form>
+        <button type="submit" onClick={randomizer}>Ask for a prompt</button>
+        <p> 
+          {displayPrompt}
+        </p>
+    </>
+    )
+
+
 }
 
 export default Prompts;
