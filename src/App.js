@@ -15,6 +15,7 @@ import { useEffect, useState } from 'react';
 function App() {
   const [prompts, setPrompts] = useState([]);
   const [userPromptInput, setUserPromptInput] = useState('');
+  
 
   // event listener functions 
   // 1. user typing in text input
@@ -56,13 +57,20 @@ function App() {
   }, [])
   
   const randomizer = () => {
+    // e.preventDefault();
+
+  
+  
     // variable with random index number, based on array length
     const randomIndex = Math.floor(Math.random() * prompts.length);
+  
       console.log(randomIndex);  // ✅
 
       console.log(prompts[randomIndex]); // gives us the writing prompt, based on index number ✅
+    
 
       return prompts[randomIndex]
+
   }
 
   return (
@@ -83,11 +91,32 @@ function App() {
             />
           </label>
         <button type="submit" onClick={handlePromptClick}>Add a writing prompt</button>
-        </form>
         <button type="submit" onClick={randomizer}>Ask for a prompt</button>
-        <p>
-          {randomizer}
+        </form>
+
+         <p>
+          {randomizer()}
         </p>
+        {/* <button type="submit" onClick={randomizer}>Ask for a prompt</button> */}
+        
+      
+      <div className="icons">
+    <FontAwesomeIcon className='clock' size='2x' icon ={faClock} />
+
+  
+    <FontAwesomeIcon className='pen' size='2x' icon ={faPen}
+    />
+
+  <FontAwesomeIcon className='page' size='2x' icon ={faFile}
+  />
+
+  <FontAwesomeIcon className='sun' size='2x' icon ={faSun}
+  />
+  
+  </div>
+
+
+
 
 
       <div className="text-box">

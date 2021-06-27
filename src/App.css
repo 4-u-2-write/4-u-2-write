@@ -59,14 +59,16 @@ textarea {
 
 }
 
-label .star {
-    position: relative;
-}
+/* label .star {
+     position: relative; 
+    
+} */
 
 .star {
     color: #EAE5E9;
-    position: absolute;
+    position: relative;
     left: 8%;
+    
 }
 
 .icons {
@@ -78,7 +80,19 @@ label .star {
     float: right;
     position: relative;
     top: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    color: #EAE5E9;
+
 }
+
+.icons :hover {
+    color: #78CAD2;
+    transform: scale(1.2)
+
+}
+
+
 
 
 
