@@ -14,6 +14,8 @@ function App() {
   const [prompts, setPrompts] = useState([]);
   const [userPromptInput, setUserPromptInput] = useState('');
   const [displayPrompt, setDisplayPrompt] = useState('');
+  // const [entries, setEntries] = useState('');
+  const [userEntryInput, setUserEntryInput] = useState('');
 
   // event listener functions 
   // 1. user typing in text input
@@ -33,10 +35,25 @@ function App() {
   }
 
 
+  const handleEntryChange = (e) => {
+    setUserEntryInput(e.target.value);
+  }
+  // Click on user entry
+  const handleEntryClick = (e) => {
+    e.preventDefault();
+    if(userEntryInput !== "") {
+      const dbRefEntries = firebase.database().ref('/Entries');
+      dbRefEntries.push(userEntryInput);
+    }
+    setUserEntryInput('');
+  }
+
+
 
   useEffect(() => {
     // ref to firebase with nested prompts data
     const dbRefPrompts = firebase.database().ref('/Prompts');
+    const dbRefEntries = firebase.database().ref('/Entries');
 
     dbRefPrompts.on('value', (response) => {
       // console.log(response.val());
@@ -51,6 +68,7 @@ function App() {
       // console.log(newState);
     
     });
+
     
   }, [])
   
@@ -102,10 +120,17 @@ function App() {
 
 
 
-      <div className="text-box">
-        <textarea id="story" name="story"placeholder="Start writing here...." rows="25" cols="75">
+      <form className="text-box">
+        <textarea 
+        id="story" name="story"
+        placeholder="Start writing here...." 
+        rows="25" cols="75"
+        onChange={handleEntryChange}
+        value={userEntryInput}
+        >
         </textarea>
-      </div>    
+        <button type="submit" onClick={handleEntryClick}>Save Entry</button>
+      </form>    
 
 
     </div>
