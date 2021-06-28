@@ -1,7 +1,7 @@
 import firebase from "./firebase";
 import { useState } from "react";
 
-const Entry = () => {
+const Entry = (props) => {
 
   const [userEntryInput, setUserEntryInput] = useState('');
 
