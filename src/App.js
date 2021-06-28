@@ -1,13 +1,20 @@
 import Prompts from './Prompts';
 import Entry from './Entry';
 import IconSet from './IconSet';
-import Timer from './Timer';
+import Timers from './Timer';
 import { TimeForm } from './Timer';
 import './App.css';
+import {useState} from 'react';
 
 
 function App() {
-  
+const [selected, setSelected] = useState(0);
+
+const handleSubmit = (e, value) => {
+  e.preventDefault();
+  setSelected(value);
+}
+
 
   return (
     <div className="App">
@@ -16,6 +23,7 @@ function App() {
 
       <div> 
         <Prompts />
+        
       </div>
 
       <div>
@@ -26,7 +34,9 @@ function App() {
         <Entry />
       </div>
 
-
+      <Timers userChoice={selected}/>
+      < TimeForm handleSubmit={handleSubmit}/>
+     
     </div>
   );
 }
