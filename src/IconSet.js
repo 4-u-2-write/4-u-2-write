@@ -5,11 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const IconSet = () => {
   return (
     <div className="icons">
-      <FontAwesomeIcon className='clock' size='2x' icon={faClock} />
-      <FontAwesomeIcon className='pen' size='2x' icon={faEdit} />
-      <FontAwesomeIcon className='page' size='2x' icon={faFile} />
-      <FontAwesomeIcon className='sun' size='2x' icon={faAdjust} />
-      <FontAwesomeIcon className='save' size='2x' icon={faSave} />
+      <FontAwesomeIcon className='clock fa-rotate-270' size='2x' icon={faClock} />
+      <FontAwesomeIcon className='pen fa-rotate-270' size='2x' icon={faEdit} />
+      <FontAwesomeIcon className='page fa-rotate-270' size='2x' icon={faFile} />
+      <FontAwesomeIcon className='sun fa-rotate-270' size='2x' icon={faAdjust} />
+      <FontAwesomeIcon className='save fa-rotate-270' size='2x' icon={faSave} />
     </div>
   )
 }

@@ -1,3 +1,4 @@
+
 import Prompts from './Prompts';
 import Entry from './Entry';
 import IconSet from './IconSet';
@@ -26,9 +27,10 @@ function App() {
         <Entry />
       </div>
 
+</div>  
 
-    </div>
   );
+
 }
 
 export default App;

@@ -83,13 +83,16 @@ textarea {
     display: flex;
     justify-content: space-evenly;
     color: #EAE5E9;
-
+    
 }
+
 
 .icons :hover {
     color: #78CAD2;
-    transform: scale(1.2)
-
+    /* transform: scale(0.8); */
+    
+    
+    
 }
 
 
