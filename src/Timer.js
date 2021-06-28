@@ -25,6 +25,18 @@ const TimeForm = (props) => {
     const updateTime = (e) => {
         setTimeAmount(e.target.value);
     }
+
+    const [value, setValue] = useState("");
+
+    const handleOnChange = (event) => {
+        setValue(event.target.value);
+    };
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => alert("Get back to work!"), 3000);
+        return () => clearTimeout(timeoutId);
+    }, [value]);
+
     return (
         <form onSubmit = {(e) => props.handleSubmit(e, timeAmount)}>
             <select required id="timeSelect" name="timeSelect"  value={timeAmount} onChange={updateTime}>
