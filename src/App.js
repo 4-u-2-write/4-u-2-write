@@ -5,6 +5,7 @@ import IconSet from './IconSet';
 import Timer from './Timer';
 import { TimeForm } from './Timer';
 import './App.css';
+import Darkmode from './Darkmode';
 
 
 function App() {
@@ -26,6 +27,10 @@ function App() {
       <div>
         <Entry />
       </div>
+
+      
+
+  
 
 </div>  
 

@@ -89,11 +89,16 @@ textarea {
 
 .icons :hover {
     color: #78CAD2;
-    /* transform: scale(0.8); */
+    /* transform: scale(1.2);
+    margin: 0;
+    padding: 0; */
     
     
     
 }
+
+
+
 
 
 
