@@ -6,12 +6,14 @@ import Timers from './Timer';
 import { TimeForm } from './Timer';
 import './App.css';
 import {useState} from 'react';
+// import Fifteen from './Fifteen';
+
 
 
 
 function App() {
 const [selected, setSelected] = useState(0);
-
+const [typing, setTyping] = useState('');
 const handleSubmit = (e, value) => {
   e.preventDefault();
   setSelected(value);
