@@ -20,16 +20,17 @@ const Entry = (props) => {
 
   return (
     <>
-      <form className="text-box">
+      <form className="text-box" >
         <textarea
           id="story" name="story"
           placeholder="Start writing here...."
           rows="25" cols="75"
           onChange={handleEntryChange}
           value={userEntryInput}
+
         >
         </textarea>
-        <button type="submit" onClick={handleEntryClick}>Save Entry</button>
+        <button type="submit" onClick={handleEntryClick} >Save Entry</button>
       </form>
     </>
   )
