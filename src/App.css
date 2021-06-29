@@ -13,7 +13,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 
 body {
-    background-color: #23395b;
+    background-color: #EAE5E9;
 }
 
 h1 {
@@ -32,7 +32,7 @@ form {
 
 input,
 textarea {
-    background-color: #23395b;
+    background-color: #EAE5E9;
 }
 
 input {
@@ -40,7 +40,8 @@ input {
     width: 400px;
     height: 50px;
     text-align: center;
-    color: #EAE5E9;
+    color: #23395B;
+    
 }
 
 .text-box {
@@ -54,10 +55,12 @@ textarea {
     max-width: 100%;
     line-height: 1.5;
     border-radius: 10px;
-    color: #EAE5E9;
     margin-bottom: 10%;
+    color: #23395B;
 
 }
+
+
 
 /* label .star {
      position: relative; 
@@ -65,7 +68,7 @@ textarea {
 } */
 
 .star {
-    color: #EAE5E9;
+    color: #23395B;
     position: relative;
     left: 8%;
     
@@ -74,7 +77,7 @@ textarea {
 .icons {
     width: 270px;
     border-radius: 40px;
-    border: 1px solid #EAE5E9;
+    border: 1px solid #23395B;
     padding: 20px;
     transform: rotate(90deg);
     float: right;
@@ -82,7 +85,7 @@ textarea {
     top: 300px;
     display: flex;
     justify-content: space-evenly;
-    color: #EAE5E9;
+    color: #23395B
     
 }
 
@@ -93,9 +96,13 @@ textarea {
     margin: 0;
     padding: 0; */
     
-    
-    
 }
+
+.dark-mode {
+    background-color: #23395B;
+    color: #EAE5E9;
+}
+
 
 
 

@@ -1,14 +1,6 @@
 import { useState, useEffect } from "react";
 import { Timer } from 'react-countdown-clock-timer';
 
-const Timer = () => {
-    const [count, setCount] = useState(60);
-    // setCount(timeAmount);
-    useEffect(() => {
-        const timer = count > 0 && setTimeout(() => {
-            setCount(count - 1)
-        }, 1000);
-    }, [count])
 
 const Timers = (props) => {
     const timerTest = parseInt(props.userChoice);
@@ -44,6 +36,10 @@ const TimeForm = (props) => {
         const timeoutId = setTimeout(() => alert("Get back to work!"), 3000);
         return () => clearTimeout(timeoutId);
     }, [value]);
+    
+        
+
+    
 
     return (
         <form onSubmit = {(e) => props.handleSubmit(e, timeAmount)}>

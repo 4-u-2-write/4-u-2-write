@@ -6,9 +6,8 @@ import Timers from './Timer';
 import { TimeForm } from './Timer';
 import './App.css';
 import {useState} from 'react';
+
 // import Fifteen from './Fifteen';
-
-
 
 
 function App() {
@@ -38,18 +37,13 @@ const handleSubmit = (e, value) => {
         <Entry />
       </div>
 
-      
+     
 
-  
-
-</div>  
       <Timers userChoice={selected}/>
       < TimeForm handleSubmit={handleSubmit}/>
      
     </div>
-
   );
-
 }
 
 export default App;
