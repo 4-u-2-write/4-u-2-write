@@ -108,6 +108,18 @@ textarea {
     border: 1px solid #EAE5E9;
 }
 
+.dark-mode textarea {
+    background-color: #23395B;
+    color: white;
+}
+.dark-mode input {
+    background: #23395B;
+    color: white;
+}
+
+.dark-mode .star {
+    color: #EAE5E9;
+}
 
 
 

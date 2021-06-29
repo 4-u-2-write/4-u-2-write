@@ -20,26 +20,11 @@ const Timers = (props) => {
 
 
 const TimeForm = (props) => {
-    const [timeAmount, setTimeAmount] = useState(0);
+    const [timeAmount, setTimeAmount] = useState("");
 
     const updateTime = (e) => {
         setTimeAmount(e.target.value);
     }
-
-    const [value, setValue] = useState("");
-
-    const handleOnChange = (event) => {
-        setValue(event.target.value);
-    };
-
-    useEffect(() => {
-        const timeoutId = setTimeout(() => alert("Get back to work!"), 3000);
-        return () => clearTimeout(timeoutId);
-    }, [value]);
-    
-        
-
-    
 
     return (
         <form onSubmit = {(e) => props.handleSubmit(e, timeAmount)}>
