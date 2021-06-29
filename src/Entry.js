@@ -1,8 +1,7 @@
 import firebase from "./firebase";
-import { useState } from "react";
-import Timers from "./Timer";
+import { useState, useEffect } from "react";
 
-const Entry = (props) => {
+const Entry = () => {
 
   const [userEntryInput, setUserEntryInput] = useState('');
 
@@ -12,7 +11,13 @@ const Entry = (props) => {
       
     }
   }
-  // Click on user entry
+// if text box value stops changing ( aka user stops typing) for 15 seconds then show alert
+  useEffect(() => {
+    const timeoutId = setInterval(() => alert("Get back to work!"), 15000);
+    return () => clearTimeout(timeoutId);
+  }, [userEntryInput]);
+
+  // when save button is clicked push user entry to firebase database
   const handleEntryClick = (e) => {
     e.preventDefault();
     if (userEntryInput !== "") {
@@ -21,6 +26,7 @@ const Entry = (props) => {
     }
     setUserEntryInput('');
   }
+
 
   return (
     <>
