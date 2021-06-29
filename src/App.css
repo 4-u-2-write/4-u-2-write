@@ -103,6 +103,11 @@ textarea {
     color: #EAE5E9;
 }
 
+.dark-mode .icons {
+    color: #EAE5E9;
+    border: 1px solid #EAE5E9;
+}
+
 
 
 
