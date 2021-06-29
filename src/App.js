@@ -1,47 +1,37 @@
-
+import './App.css';
 import Prompts from './Prompts';
 import Entry from './Entry';
 import IconSet from './IconSet';
 import Timers from './Timer';
 import { TimeForm } from './Timer';
-import './App.css';
 import {useState} from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 // import Fifteen from './Fifteen';
 
 
 function App() {
-const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState(0);
 
-const handleSubmit = (e, value) => {
-  e.preventDefault();
-  setSelected(value);
-}
+  const handleSubmit = (e, value) => {
+    e.preventDefault();
+    setSelected(value);
+  }
 
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
 
-      <h1>Bootcamp Diaries</h1>
+        <h1>Bootcamp Diaries</h1>
 
-      <div> 
-        <Prompts />
+        <Route path="/" component={IconSet} />
+        <Route exact path="/prompts/" component={Prompts} />
+        <Route exact path="/timers/" component = {props => <Timers userChoice={selected} />} />
+        <Route exact path="/timers/" component = {props => <TimeForm handleSubmit={handleSubmit} />} />
+        <Route path="/" component={Entry} />
         
       </div>
-
-      <div>
-        <IconSet />
-      </div>
-      
-      <div>
-        <Entry/>
-      </div>
-
-     
-
-      <Timers userChoice={selected}/>
-      < TimeForm handleSubmit={handleSubmit}/>
-     
-    </div>
+    </Router>
   );
 }
 

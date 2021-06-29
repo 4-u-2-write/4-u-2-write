@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Timer } from 'react-countdown-clock-timer';
 
 
@@ -7,12 +7,12 @@ const Timers = (props) => {
 
     return (
     <div className='timer-container'>
-      <Timer
-      durationInSeconds={timerTest}
-      formatted={true}
-      isPaused={false}
-      showPauseButton={false}
-      showResetButton={false}/>
+			<Timer
+			durationInSeconds={timerTest}
+			formatted={true}
+			isPaused={false}
+			showPauseButton={false}
+			showResetButton={false}/>
     </div>
     )
 }
