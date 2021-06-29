@@ -17,6 +17,7 @@ const Entry = () => {
     return () => clearTimeout(timeoutId);
   }, [userEntryInput]);
 
+
   // when save button is clicked push user entry to firebase database
   const handleEntryClick = (e) => {
     e.preventDefault();
