@@ -1,5 +1,6 @@
 import firebase from "./firebase";
 import { useState } from "react";
+import Timers from "./Timer";
 
 const Entry = (props) => {
 
@@ -7,6 +8,9 @@ const Entry = (props) => {
 
   const handleEntryChange = (e) => {
     setUserEntryInput(e.target.value);
+    if (userEntryInput !== "") {
+      
+    }
   }
   // Click on user entry
   const handleEntryClick = (e) => {
@@ -20,7 +24,7 @@ const Entry = (props) => {
 
   return (
     <>
-      <form className="text-box" >
+      <form className="text-box">
         <textarea
           id="story" name="story"
           placeholder="Start writing here...."

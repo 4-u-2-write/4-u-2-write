@@ -36,6 +36,10 @@ const TimeForm = (props) => {
         const timeoutId = setTimeout(() => alert("Get back to work!"), 3000);
         return () => clearTimeout(timeoutId);
     }, [value]);
+    
+        
+
+    
 
     return (
         <form onSubmit = {(e) => props.handleSubmit(e, timeAmount)}>
