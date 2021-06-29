@@ -12,12 +12,11 @@ import {useState} from 'react';
 
 function App() {
 const [selected, setSelected] = useState(0);
-const [typing, setTyping] = useState('');
+
 const handleSubmit = (e, value) => {
   e.preventDefault();
   setSelected(value);
 }
-
 
   return (
     <div className="App">
@@ -34,7 +33,7 @@ const handleSubmit = (e, value) => {
       </div>
       
       <div>
-        <Entry />
+        <Entry/>
       </div>
 
      
