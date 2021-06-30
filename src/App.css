@@ -94,7 +94,7 @@ label[for="toggleMenu"]:focus {
 
 form {
     display: flex;
-    justify-content: start;
+    justify-content: center;
 }
 
 input,
