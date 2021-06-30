@@ -16,8 +16,13 @@ body {
     background-color: #EAE5E9;
 }
 
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
 h1 {
-    color: #EAE5E9;
+    color: #23395B;
 }
 
 .text-box {
@@ -54,18 +59,11 @@ textarea {
     padding: 10px;
     max-width: 100%;
     line-height: 1.5;
-    border-radius: 10px;
     margin-bottom: 10%;
     color: #23395B;
-
+    border: none;
+    box-shadow: 0 0 30px 1px #23395B;
 }
-
-
-
-/* label .star {
-     position: relative; 
-    
-} */
 
 .star {
     color: #23395B;
@@ -86,12 +84,13 @@ textarea {
     display: flex;
     justify-content: space-evenly;
     color: #23395B
-    
 }
 
 
-.icons :hover {
+.icons :hover,
+.icons :focus {
     color: #78CAD2;
+    cursor: pointer;
     /* transform: scale(1.2);
     margin: 0;
     padding: 0; */
