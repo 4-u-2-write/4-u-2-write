@@ -117,10 +117,11 @@ input {
     justify-content: center;
     margin-top: 7%;
     width: 100%;
-    
+} 
 
 .divContainer {
     height: 20vh;
+
 }
 
 /* entryContainer styles */
@@ -280,11 +281,11 @@ textarea:placeholder-shown {
         margin-left: 40%;
     }
 
-    .addPrompt {
+    /* .addPrompt {
         
 
     
-    }
+    } */
 
     label[for="toggleMenu"] {
         top: 20%;
@@ -292,13 +293,13 @@ textarea:placeholder-shown {
         
     }
 
-    .slidingIcons {
+    /* .slidingIcons {
         
     }
 
     .promptForm input {
         
-    }
+    } */
 
 }
 
