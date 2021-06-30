@@ -34,7 +34,6 @@ const [selected, setSelected] = useState(0);
             <img src={logo} alt="Bootcamp Diaries Logo"/>
           </div>
           <Route path="/" component={props => <IconSet userEntry={userEntryInput}/>} />
-
         </nav>
     
         <Route exact path="/prompts/" component={Prompts} />
