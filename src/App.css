@@ -94,11 +94,6 @@ label[for="toggleMenu"]:focus {
 /* end sliding menu styles */
 
 
-.text-box {
-    margin-top: 7%;
-    width: 100%;
-}
-
 form {
     display: flex;
     justify-content: center;
@@ -121,6 +116,8 @@ input {
 .text-box {
     display: flex;
     justify-content: center;
+    margin-top: 7%;
+    width: 100%;
     
 }
 
@@ -131,6 +128,7 @@ textarea {
     margin-bottom: 10%;
     color: #23395B;
     border: none;
+    resize: none;
     box-shadow: rgba(35, 57, 91, 0.19) 3px 10px 20px, rgba(35, 57, 91, 0.19) 3px 6px 6px;
 }
 
@@ -216,7 +214,6 @@ textarea {
     color: #23395B;
 }
 
-
 /* end timer component styles */
 
 
@@ -227,13 +224,15 @@ textarea {
 
 .dark-mode .icons {
     color: #EAE5E9;
-    border: 1px solid #EAE5E9;
 }
 
 .dark-mode textarea {
     background-color: #23395B;
     color: white;
+    box-shadow: rgba(2, 6, 12, 0.50) 3px 0px 20px,
+    rgba(35, 57, 91, 0.50) 3px 0px 6px;
 }
+
 .dark-mode input {
     background: #23395B;
     color: white;
@@ -243,6 +242,10 @@ textarea {
     color: #EAE5E9;
 }
 
+
+.dark-mode label[for="toggleMenu"] {
+    color: white;
+}
 
 
 

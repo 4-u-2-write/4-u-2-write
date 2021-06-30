@@ -30,7 +30,7 @@ const [selected, setSelected] = useState(0);
     <Router>
       <div className="App wrapper">
         <nav>
-          <div class="logoContainer">
+          <div className="logoContainer">
             <img src={logo} alt="Bootcamp Diaries Logo"/>
           </div>
           <Route path="/" component={props => <IconSet userEntry={userEntryInput}/>} />
