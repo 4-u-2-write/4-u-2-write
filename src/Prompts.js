@@ -64,6 +64,7 @@ const Prompts = () => {
             <input 
               type="text" 
               id="newPrompt"
+              className="newPromt"
               placeholder="Submit a writing prompt for the community!" 
               onChange={handlePromptChange}
               value={userPromptInput}

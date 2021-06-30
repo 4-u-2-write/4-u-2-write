@@ -18,7 +18,6 @@ const Timers = (props) => {
 }
 
 
-
 const TimeForm = (props) => {
     const [timeAmount, setTimeAmount] = useState("");
 

@@ -1,13 +1,11 @@
 import './App.css';
 import logo from './assets/bootcampDiariesOutlined.png';
 import Prompts from './Prompts';
-// import Entry from './Entry';
 import IconSet from './IconSet';
 import Timers from './Timer';
 import { TimeForm } from './Timer';
 import {useState} from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-// import firebase from "./firebase";
 
 
 
@@ -19,15 +17,6 @@ const [selected, setSelected] = useState(0);
     setSelected(value);
   }
 
-  // // when save button is clicked push user entry to firebase database
-  // const userEntryInput = (entry) => {
-  //   setEntryInput(entry);
-  //   // if (userEntryInput !== "") {
-  //   //   const dbRefEntries = firebase.database().ref('/Entries');
-  //   //   dbRefEntries.push(userEntryInput);
-  //   // }
-  // }
-
   const [userEntryInput, setUserEntryInput] = useState('');
 
   const handleEntryChange = (e) => {
@@ -37,30 +26,32 @@ const [selected, setSelected] = useState(0);
   }
   console.log(userEntryInput);
   
-
   return (
     <Router>
       <div className="App wrapper">
+        <nav>
+          <div class="logoContainer">
+            <img src={logo} alt="Bootcamp Diaries Logo"/>
+          </div>
+          <Route path="/" component={props => <IconSet userEntry={userEntryInput}/>} />
 
-      <img src={logo} alt="Bootcamp Diaries Logo"/>
+        </nav>
     
-        <Route path="/" component={props => <IconSet userEntry={userEntryInput}/>} />
         <Route exact path="/prompts/" component={Prompts} />
         <Route exact path="/timers/" component = {props => <Timers userChoice={selected} />} />
         <Route exact path="/timers/" component = {props => <TimeForm handleSubmit={handleSubmit} />} />
 
-        <>
-      <form className="text-box">
-        <textarea
-          id="story" name="story"
-          placeholder="Start writing here...."
-          rows="25" cols="75"
-          onChange={handleEntryChange}
-          value={userEntryInput}
-        >
-        </textarea>
-      </form>
-    </>
+      
+        <form className="text-box">
+          <textarea
+            id="story" name="story"
+            placeholder="Start writing here...."
+            rows="25" cols="75"
+            onChange={handleEntryChange}
+            value={userEntryInput}
+          >
+          </textarea>
+        </form>
         
       </div>
     </Router>
