@@ -94,7 +94,7 @@ label[for="toggleMenu"]:focus {
 
 form {
     display: flex;
-    justify-content: center;
+    justify-content: start;
 }
 
 input,
@@ -139,6 +139,10 @@ textarea:placeholder-shown {
 .icons :focus {
     color: #78CAD2;
     cursor: pointer;
+}
+
+.sync {
+    color: #23395B;
 }
 
 .page {
@@ -202,6 +206,20 @@ textarea:placeholder-shown {
 /* end timer component styles */
 
 /* prompt component styles  */
+
+.promptsFlex {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.promptsRequest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .promptForm button,
 .promptForm input,
 .randPrompt {
@@ -211,9 +229,20 @@ textarea:placeholder-shown {
 }
 .promptForm button,
 .randPrompt {
-    background-color: #EAE5E9;
-    border-radius: 5%;
+     background-color: #78CAD2;
     color: #23395B;
+    color: #23395B;
+    /* font-weight: 700; */
+    letter-spacing: 1px;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+}
+.promptsRequest p {
+    margin-top: 5px;
+}
+.promptsRequest {
+    padding-top: 60px;
 }
 
 
