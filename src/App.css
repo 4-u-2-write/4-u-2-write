@@ -46,8 +46,7 @@ h1 {
 /* end general styles */
 
 
-/* nav styling */
-
+/* nav styles*/
 nav {
     display: flex;
 }
@@ -57,13 +56,13 @@ nav {
     margin-top: 20px;
     margin-left: 25px;
 }
-
+/* end nav styles */
 
 /* sliding menu styles */
 .slidingIcons {
     position: fixed;
     right: -150px;
-    top: 175px;
+    top: 185px;
     transition: all 0.3s ease-out;
     transform: rotate(90deg);
     color: #23395B;
@@ -119,7 +118,12 @@ input {
     margin-top: 7%;
     width: 100%;
     
+
+.divContainer {
+    height: 20vh;
 }
+
+/* entryContainer styles */
 
 textarea {
     padding: 10px;
@@ -130,7 +134,10 @@ textarea {
     border: none;
     resize: none;
     box-shadow: rgba(35, 57, 91, 0.19) 3px 10px 20px, rgba(35, 57, 91, 0.19) 3px 6px 6px;
+    /* background-image: url(./assets/dotted-grid.png); */
+    /* background-position: center; */
 }
+
 
 .star {
     color: #23395B;
@@ -138,10 +145,12 @@ textarea {
     left: 8%;
 }
 
+textarea:placeholder-shown {
+    font-style: italic;
+}
+/* end entryContainer styles */
 
 /* icon styles */
-
-
 .icons :hover,
 .icons :focus {
     color: #78CAD2;
@@ -180,24 +189,33 @@ textarea {
 /* end icon styles */
 
 /* timer component styles */
-.timer-container {
-    text-align: right;
+
+.timerCount {
+    margin: 40px;
+    text-align: center;
     font-size: 1.5rem;
+    text-decoration: underline;
+    text-decoration-color: #78CAD2;
+    text-decoration-thickness: 10%;
 }
 
 .dropBtn {
     background-color: #78CAD2;
     color: #23395B;
-    /* font-weight: 700; */
     letter-spacing: 1px;
     padding: 15px 25px;
+    margin-left: 15px;
     border: none;
     cursor: pointer;
     box-shadow: rgba(35, 57, 91, 0.19) 3px 10px 20px, rgba(35, 57, 91, 0.19) 3px 6px 6px;
 }
+
 #timeSelect {
     box-shadow: rgba(35, 57, 91, 0.19) 0 10px 20px, rgba(35, 57, 91, 0.19) 0 6px 6px;
+    letter-spacing: 1px;
+    padding: 0 5px;
 }
+/* end timer component styles */
 
 /* prompt component styles  */
 .promptForm button,
@@ -214,9 +232,6 @@ textarea {
     color: #23395B;
 
 }
-
-/* end timer component styles */
-
 
 .dark-mode {
     background-color: #23395B;
