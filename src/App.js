@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 
+
 function App() {
 const [selected, setSelected] = useState(0);
 
@@ -29,6 +30,8 @@ const [selected, setSelected] = useState(0);
   return (
     <Router>
       <div className="App wrapper">
+
+  
         <nav>
           <div className="logoContainer">
             <img src={logo} alt="Bootcamp Diaries Logo"/>
@@ -40,6 +43,8 @@ const [selected, setSelected] = useState(0);
         <Route exact path="/prompts/" component={Prompts} />
         <Route exact path="/timers/" component = {props => <Timers userChoice={selected} />} />
         <Route exact path="/timers/" component = {props => <TimeForm handleSubmit={handleSubmit} />} />
+
+        
 
       
         <form className="text-box">

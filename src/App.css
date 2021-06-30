@@ -30,11 +30,11 @@ body {
     background-color: #EAE5E9;
     font-family: 'Lato', sans-serif;
 }
-
+/* 
 .wrapper {
     max-width: 1300px;
     margin: 0 auto;
-}
+} */
 
 a {
     color: inherit;
@@ -212,6 +212,7 @@ textarea {
     background-color: #EAE5E9;
     border-radius: 5%;
     color: #23395B;
+
 }
 
 /* end timer component styles */
@@ -245,6 +246,58 @@ textarea {
 
 .dark-mode label[for="toggleMenu"] {
     color: white;
+}
+
+
+@media (max-width: 800px) {
+
+    .logoContainer {
+        width: 50%;
+        margin-top: 20px;
+        margin-left: 20%;
+        align-items: center;
+    
+    }
+
+    
+    .randPrompt {
+        margin-top: 5%;
+        margin-left: 40%;
+    }
+
+    .addPrompt {
+        
+
+    
+    }
+
+    label[for="toggleMenu"] {
+        top: 20%;
+        
+        
+    }
+
+    .slidingIcons {
+        
+    }
+
+    .promptForm input {
+        
+    }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+.text-box {
+    width: 95%;
+    margin-left: 2%;
+}
+
+
+
 }
 
 
