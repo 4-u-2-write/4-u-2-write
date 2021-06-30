@@ -140,40 +140,6 @@ textarea {
     left: 8%;
 }
 
-/* sliding menu styles */
-.slidingIcons {
-    position: fixed;
-    right: -120px;
-    top: 250px;
-    transition: all 0.3s ease-in;
-    transform: rotate(90deg);
-    color: #23395B;
-}
-
-#toggleMenu:checked + .slidingIcons {
-    right: 0;
-}
-
-#toggleMenu {
-    display: none;
-}
-
-label[for="toggleMenu"] {
-    position: fixed;
-    top: 100px;
-    right: 25px;
-    color: #23395B;
-    font-weight: 700;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
-
-label[for="toggleMenu"]:hover,
-label[for="toggleMenu"]:focus {
-    color: #78CAD2;
-}
-/* end sliding menu styles */
-
 
 /* icon styles */
 
