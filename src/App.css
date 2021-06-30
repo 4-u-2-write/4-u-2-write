@@ -14,6 +14,11 @@ html {
     font-size: 125%;
 }
 
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -27,27 +32,71 @@ body {
 }
 
 .wrapper {
-    max-width: 1200px;
-    width: 90%;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
 a {
     color: inherit;
 }
-/* end general styles */
-
-.wrapper {
-    max-width: 1300px;
-    margin: 0 auto;
-}
 
 h1 {
     color: #23395B;
 }
+/* end general styles */
+
+
+/* nav styling */
+
+nav {
+    display: flex;
+}
+
+.logoContainer {
+    width: 30%;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+
+/* sliding menu styles */
+.slidingIcons {
+    position: fixed;
+    right: -150px;
+    top: 175px;
+    transition: all 0.3s ease-out;
+    transform: rotate(90deg);
+    color: #23395B;
+}
+
+#toggleMenu:checked + .slidingIcons {
+    right: 0;
+}
+
+#toggleMenu {
+    display: none;
+}
+
+label[for="toggleMenu"] {
+    position: fixed;
+    top: 35px;
+    right: 55px;
+    color: #23395B;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+label[for="toggleMenu"]:hover,
+label[for="toggleMenu"]:focus {
+    color: #78CAD2;
+}
+/* end sliding menu styles */
+
 
 .text-box {
-    margin-top: 10%;
+    margin-top: 7%;
+    width: 100%;
 }
 
 form {
@@ -95,10 +144,8 @@ textarea {
 .slidingIcons {
     position: fixed;
     right: -120px;
-    /* right: -30%; */
-    top: 450px;
+    top: 250px;
     transition: all 0.3s ease-in;
-    /* height: vh; */
     transform: rotate(90deg);
     color: #23395B;
 }
@@ -113,7 +160,7 @@ textarea {
 
 label[for="toggleMenu"] {
     position: fixed;
-    top: 300px;
+    top: 100px;
     right: 25px;
     color: #23395B;
     font-weight: 700;
@@ -129,19 +176,6 @@ label[for="toggleMenu"]:focus {
 
 
 /* icon styles */
-/* .icons {
-    font-size: 1rem;
-    border-radius: 40px;
-    border: 1px solid #23395B;
-    padding: 11px 30px;
-    transform: rotate(90deg);
-    float: right;
-    position: relative;
-    top: 300px;
-    display: flex;
-    justify-content: space-evenly;
-    color: #23395B
-} */
 
 
 .icons :hover,
