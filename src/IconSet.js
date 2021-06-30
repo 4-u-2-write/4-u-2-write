@@ -1,5 +1,5 @@
 import { faClock, faEdit, faFile, faSave } from '@fortawesome/free-regular-svg-icons';
-import { faAdjust } from '@fortawesome/free-solid-svg-icons';
+import { faAdjust, faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import firebase from "./firebase";
 import { Link } from 'react-router-dom';
@@ -22,16 +22,22 @@ const IconSet = (props) => {
 
 
   return (
-    <div className="icons">
-      <Link to={`/timers/`}>
-        <FontAwesomeIcon className='clock fa-rotate-270' size='2x' icon={faClock} />
-      </Link>
-      <Link to={`/prompts/`}>
-        <FontAwesomeIcon className='pen fa-rotate-270' size='2x' icon={faEdit} />
-      </Link>
-      <FontAwesomeIcon className='page fa-rotate-270' size='2x' icon={faFile} />
-      <FontAwesomeIcon className='sun fa-rotate-270' size='2x' icon={faAdjust} onClick={toggleMode} />
-      <FontAwesomeIcon className='save fa-rotate-270' size='2x' icon={faSave} onClick={pushToFirebase}/>
+    <div>
+      <label htmlFor="toggleMenu">✍️Toolbar Menu</label>
+      <input type="checkbox" id="toggleMenu" name="toggleMenu" />
+      <div className="icons slidingIcons">
+        <Link to={`/`}>
+          <FontAwesomeIcon className='page fa-rotate-270' size='2x' icon={faFile} title='Hide Toolbar' />
+        </Link>
+        <Link to={`/timers/`}>
+          <FontAwesomeIcon className='clock fa-rotate-270' size='2x' icon={faClock} title='Timer Toolbar' />
+        </Link>
+        <Link to={`/prompts/`}>
+          <FontAwesomeIcon className='edit fa-rotate-270' size='2x' icon={faEdit} title='Prompt Toolbar' />
+        </Link>
+        <FontAwesomeIcon className='adjust fa-rotate-270' size='2x' icon={faAdjust} onClick={toggleMode} />
+        <FontAwesomeIcon className='save fa-rotate-270' size='2x' icon={faSave} onClick={pushToFirebase}/>
+      </div>
     </div>
   )
 }
