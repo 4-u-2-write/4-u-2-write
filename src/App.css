@@ -82,7 +82,7 @@ textarea {
     margin-bottom: 10%;
     color: #23395B;
     border: none;
-    box-shadow: 0 0 30px 1px #23395B;
+    box-shadow: rgba(35, 57, 91, 0.19) 3px 10px 20px, rgba(35, 57, 91, 0.19) 3px 6px 6px;
 }
 
 .star {
@@ -94,9 +94,10 @@ textarea {
 /* sliding menu styles */
 .slidingIcons {
     position: fixed;
-    right: -30%;
+    right: -120px;
+    /* right: -30%; */
     top: 450px;
-    transition: all 0.3s ease-out;
+    transition: all 0.3s ease-in;
     /* height: vh; */
     transform: rotate(90deg);
     color: #23395B;
@@ -194,8 +195,26 @@ label[for="toggleMenu"]:focus {
     padding: 15px 25px;
     border: none;
     cursor: pointer;
+    box-shadow: rgba(35, 57, 91, 0.19) 3px 10px 20px, rgba(35, 57, 91, 0.19) 3px 6px 6px;
+}
+#timeSelect {
+    box-shadow: rgba(35, 57, 91, 0.19) 0 10px 20px, rgba(35, 57, 91, 0.19) 0 6px 6px;
 }
 
+/* prompt component styles  */
+.promptForm button,
+.promptForm input,
+.randPrompt {
+    box-shadow: rgba(35, 57, 91, 0.19) 3px 10px 20px, rgba(35, 57, 91, 0.19) 3px 6px 6px;
+    border: none;
+    
+}
+.promptForm button,
+.randPrompt {
+    background-color: #EAE5E9;
+    border-radius: 5%;
+    color: #23395B;
+}
 
 
 /* end timer component styles */

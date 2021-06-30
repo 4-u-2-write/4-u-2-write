@@ -58,7 +58,7 @@ const Prompts = () => {
 
     return (
       <>
-      <form>
+      <form className="promptForm">
         <label htmlFor="newPrompt">
           <FontAwesomeIcon className='star' icon ={faStar} />
             <input 
@@ -69,9 +69,9 @@ const Prompts = () => {
               value={userPromptInput}
             />
           </label>
-        <button type="submit" onClick={handlePromptClick}>Add a writing prompt</button>
+        <button type="submit" onClick={handlePromptClick}>Add a prompt</button>
         </form>
-        <button type="submit" onClick={randomizer}>Ask for a prompt</button>
+        <button className="randPrompt" type="submit" onClick={randomizer}>Get a prompt</button>
         <p> 
           {displayPrompt}
         </p>

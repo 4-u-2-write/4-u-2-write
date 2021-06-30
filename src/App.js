@@ -32,6 +32,8 @@ const [selected, setSelected] = useState(0);
 
   const handleEntryChange = (e) => {
     setUserEntryInput(e.target.value);
+
+    
   }
   console.log(userEntryInput);
   
