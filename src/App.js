@@ -37,10 +37,11 @@ const [selected, setSelected] = useState(0);
         </nav>
     
         <div className="divContainer">
+          <div className="toolkitContainer">
             <Route exact path="/prompts/" component={Prompts} />
             <Route exact path="/timers/" component = {props => <TimeForm handleSubmit={handleSubmit} />} />
             <Route exact path="/timers/" component = {props => <Timers userChoice={selected} />} />
-          
+          </div>
 
           <div className="entryContainer">
             <form className="textBox">
