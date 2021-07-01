@@ -52,7 +52,7 @@ nav {
 }
 
 .logoContainer {
-    width: 30%;
+    width: 40%;
     margin-top: 20px;
     margin-left: 25px;
 }
@@ -96,6 +96,7 @@ label[for="toggleMenu"]:focus {
 form {
     display: flex;
     justify-content: center;
+    margin-top: 15px;
 }
 
 input,
@@ -104,9 +105,8 @@ textarea {
 }
 
 input {
-    border-radius: 40px;
     width: 400px;
-    height: 50px;
+    /* height: 50px; */
     text-align: center;
     color: #23395B;
     
@@ -120,7 +120,7 @@ input {
 } 
 
 .divContainer {
-    height: 20vh;
+    height: 28vh;
 
 }
 
@@ -148,6 +148,7 @@ textarea {
 
 textarea:placeholder-shown {
     font-style: italic;
+    padding-top: 15px;
 }
 /* end entryContainer styles */
 
@@ -160,6 +161,8 @@ textarea:placeholder-shown {
 
 .sync {
     color: #23395B;
+    font-size: 1.2rem;
+    
 }
 
 .page {
@@ -219,13 +222,20 @@ textarea:placeholder-shown {
     box-shadow: rgba(35, 57, 91, 0.19) 0 10px 20px, rgba(35, 57, 91, 0.19) 0 6px 6px;
     letter-spacing: 1px;
     padding: 0 5px;
+    border: none;
+    background-color: #EAE5E9;
+    color: #23395B;
+    cursor: pointer;
+}
+
+#timeSelect:hover {
+    opacity: 0.9;
 }
 /* end timer component styles */
 
 /* prompt component styles  */
 
 .promptsFlex {
-    padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -244,24 +254,31 @@ textarea:placeholder-shown {
     border: none;
     
 }
+
+.newPrompt {
+    padding: 15px 0;
+}
+
+
 .promptForm button,
 .randPrompt {
-     background-color: #78CAD2;
+    background-color: #78CAD2;
     color: #23395B;
-    color: #23395B;
-
-    /* font-weight: 700; */
+    margin-left: 15px;
     letter-spacing: 1px;
     padding: 15px 25px;
     border: none;
     cursor: pointer;
 }
-.promptsRequest p {
+/* .promptsRequest p {
     margin-top: 5px;
-}
+} */
 .promptsRequest {
-    padding-top: 60px;
+    padding-top: 40px;
+    /* font-size: 1.2rem; */
+
 }
+
 
 
 .dark-mode {
@@ -294,58 +311,145 @@ textarea:placeholder-shown {
     color: white;
 }
 
+@media (max-width: 1028px) {
+
+    label[for="toggleMenu"] {
+        top: 8%;
+        right: 10px;
+        font-size: 1rem;
+    }
+
+    #toggleMenu:checked+.slidingIcons {
+        right: -60px;
+
+    }
+
+    .slidingIcons {
+        top: 165px;
+        
+    }
+
+    textarea {
+        width: 80%;
+    }
+
+
+}
+
 
 @media (max-width: 800px) {
 
     .logoContainer {
         width: 50%;
-        margin-top: 20px;
-        margin-left: 20%;
-        align-items: center;
     
     }
 
-    
-    .randPrompt {
-        margin-top: 5%;
-        margin-left: 40%;
-    }
-
-    /* .addPrompt {
+    .promptForm button {
+        padding: 5px 8px;
+        font-size: 0.8rem;
         
 
-    
-    } */
+    }
+
 
     label[for="toggleMenu"] {
-        top: 20%;
-        
+        top: 45px;
+        right: 10px;
+        font-size: 1.05rem;
+
+    }
+
+    .page {
+        padding: 4px;
         
     }
 
-    /* .slidingIcons {
+    .clock {
+        padding: 6px
         
     }
 
-    .promptForm input {
+    .edit {
+        padding: 6px
         
-    } */
+    }
+
+    .adjust {
+        padding: 6px
+    }
+
+    .save {
+        padding: 5px;
+        
+    }
+
+    .entryContainer {
+        width: 95%;
+        margin-left: 2%;
+        /* margin-top: 8%; */
+    }
+
+    .dropBtn {
+        padding: 8px;
+    }
+
+    input {
+        height: 40px;
+        font-size: 0.8rem;
+        
+    }
+
+
 
 }
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 660px) {
 
-.text-box {
-    width: 95%;
-    margin-left: 2%;
+input {
+    width: 250px
+}
+
+label[for="toggleMenu"] {
+    top: 40px;
+    font-size: 0.8rem;
+
+}
+
+.page {
+    padding: 6px;
+    right: 7px;
+
+}
+
+.clock {
+    padding: 8px;
+    right: 7px;
+}
+
+.edit {
+    padding: 8px;
+    right: 18px;
+}
+
+.adjust {
+    padding: 8px;
+    left: -25px;
+}
+
+.save {
+    padding: 7px;
+    left: -29px;
+
+}
+
 }
 
 
+/* @media (max-height: 540px) {
 
-}
-
+} */
 
 
 

@@ -71,7 +71,7 @@ const Prompts = () => {
               value={userPromptInput}
             />
           </label>
-        <button type="submit" className='addPrompt' onClick={handlePromptClick}>Add a prompt</button>
+        <button type="submit" onClick={handlePromptClick}>Add Prompt</button>
         </form>
         <div className="promptsRequest">
           <
