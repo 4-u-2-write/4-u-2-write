@@ -361,5 +361,33 @@ footer p {
 }
 
 
-/* @media (max-height: 540px) {
-} */
+@media (max-width: 550px) {
+
+    .newPrompt {
+        position: relative;
+        left: 50px;
+        top: 1px;
+    }
+
+    .promptForm button {
+        position: relative;
+        top: 53px;
+        right: 140px;
+        
+    }
+
+    .promptsRequest {
+        position: relative;
+        top: 27px;
+        
+    }
+
+    label[for="toggleMenu"] {
+        top: 33px;
+        
+    }
+
+
+} 
+
+
