@@ -72,7 +72,6 @@ label[for="toggleMenu"]:focus {
 form {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
 }
 input,
 textarea {
