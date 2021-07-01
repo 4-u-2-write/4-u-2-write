@@ -106,8 +106,8 @@ textarea {
     border: none;
     resize: none;
     box-shadow: rgba(35, 57, 91, 0.19) 3px 10px 20px, rgba(35, 57, 91, 0.19) 3px 6px 6px;
-    /* background-image: url(./assets/dotted-grid.png); */
-    /* background-position: center; */
+    background-image: url(./assets/dotted-grid.png);
+    background-position: center;
 }
 .star {
     color: #23395B;
@@ -247,6 +247,8 @@ textarea:placeholder-shown {
 .dark-mode label[for="toggleMenu"] {
     color: white;
 }
+
+/* responsive design styles */
 @media (max-width: 1028px) {
     label[for="toggleMenu"] {
         top: 8%;
@@ -263,6 +265,7 @@ textarea:placeholder-shown {
         width: 80%;
     }
 }
+
 @media (max-width: 800px) {
     .logoContainer {
         width: 50%;
@@ -304,34 +307,35 @@ textarea:placeholder-shown {
         font-size: 0.8rem;
     }
 }
+
 @media (max-width: 660px) {
-input {
-    width: 250px
-}
-label[for="toggleMenu"] {
-    top: 40px;
-    font-size: 0.8rem;
-}
-.page {
-    padding: 6px;
-    right: 7px;
-}
-.clock {
-    padding: 8px;
-    right: 7px;
-}
-.edit {
-    padding: 8px;
-    right: 18px;
-}
-.adjust {
-    padding: 8px;
-    left: -25px;
-}
-.save {
-    padding: 7px;
-    left: -29px;
-}
+    input {
+        width: 250px
+    }
+    label[for="toggleMenu"] {
+        top: 40px;
+        font-size: 0.8rem;
+    }
+    .page {
+        padding: 6px;
+        right: 7px;
+    }
+    .clock {
+        padding: 8px;
+        right: 7px;
+    }
+    .edit {
+        padding: 8px;
+        right: 18px;
+    }
+    .adjust {
+        padding: 8px;
+        left: -25px;
+    }
+    .save {
+        padding: 7px;
+        left: -29px;
+    }
 }
 /* @media (max-height: 540px) {
 } */
