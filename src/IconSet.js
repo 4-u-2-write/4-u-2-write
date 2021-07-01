@@ -8,7 +8,7 @@ const IconSet = (props) => {
 
   const toggleMode = () => {
     const element = document.body;
-    element.classList.toggle("dark-mode");
+    element.classList.toggle("darkMode");
   }
 
   const pushToFirebase = () => {
@@ -23,7 +23,7 @@ const IconSet = (props) => {
 
   return (
     <div>
-      <label htmlFor="toggleMenu">✍️Writing Toolkit</label>
+      <label htmlFor="toggleMenu">✍️ Toolkit</label>
       <input type="checkbox" id="toggleMenu" name="toggleMenu" />
       <div className="icons slidingIcons">
         <Link to={`/`}>
@@ -35,11 +35,11 @@ const IconSet = (props) => {
         <Link to={`/prompts/`}>
           <FontAwesomeIcon className='edit fa-rotate-270' size='2x' icon={faEdit} title='Prompt Toolbar' />
         </Link>
-        <Link to={[]}>
-        <FontAwesomeIcon className='adjust fa-rotate-270' size='2x' icon={faAdjust} onClick={toggleMode} title='Light/Dark Mode'/>
+        <Link>
+          <FontAwesomeIcon className='adjust fa-rotate-270' size='2x' icon={faAdjust} onClick={toggleMode} title='Light/Dark Mode'/>
         </Link>
-        <Link to={[]}>
-        <FontAwesomeIcon className='save fa-rotate-270' size='2x' icon={faSave} onClick={pushToFirebase} title='Save Entry'/>
+        <Link>
+          <FontAwesomeIcon className='save fa-rotate-270' size='2x' icon={faSave} onClick={pushToFirebase} title='Save Entry'/>
         </Link>
       </div>
     </div>
