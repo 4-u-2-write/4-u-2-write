@@ -6,7 +6,7 @@ import Timers from './Timer';
 import { TimeForm } from './Timer';
 import {useState} from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-
+import Footer from './Footer';
 
 
 function App() {
@@ -54,8 +54,12 @@ const [selected, setSelected] = useState(0);
               </textarea>
             </form>
           </div>
+        <footer>
+          <Footer />
+        </footer>
         </div>
       </div>
+      
     </Router>
   );
 }
