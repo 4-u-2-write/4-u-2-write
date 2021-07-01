@@ -82,7 +82,7 @@ const Prompts = () => {
           title="Need a writing prompt?"
           />
 
-            <p>{displayPrompt}</p>
+          <p>{displayPrompt}   &nbsp; </p>
 
         </div>
     </div>

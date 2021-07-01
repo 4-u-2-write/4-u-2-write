@@ -6,7 +6,7 @@ import Timers from './Timer';
 import { TimeForm } from './Timer';
 import {useState} from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-
+import Footer from './Footer';
 
 
 
@@ -48,6 +48,8 @@ const [selected, setSelected] = useState(0);
             <Route exact path="/prompts/" component={Prompts} />
             <Route exact path="/timers/" component = {props => <TimeForm handleSubmit={handleSubmit} />} />
             <Route exact path="/timers/" component = {props => <Timers userChoice={selected} />} />
+          
+
           <div className="entryContainer">
             <form className="textBox">
               <textarea
@@ -60,10 +62,12 @@ const [selected, setSelected] = useState(0);
               </textarea>
             </form>
           </div>
+        <footer>
+          <Footer />
+        </footer>
         </div>
-
-        
       </div>
+      
     </Router>
   );
 }
