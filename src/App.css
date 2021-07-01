@@ -22,11 +22,7 @@ body {
     background-color: #EAE5E9;
     font-family: 'Lato', sans-serif;
 }
-/* 
-.wrapper {
-    max-width: 1300px;
-    margin: 0 auto;
-} */
+
 a {
     color: inherit;
 }
@@ -81,6 +77,11 @@ form {
 input,
 textarea {
     background-color: #EAE5E9;
+    /* outline: none; */
+}
+input:focus,
+textarea:focus {
+    outline: 1px solid rgba(35, 57, 91, 0.29) ;
 }
 input {
     width: 400px;
@@ -106,15 +107,11 @@ textarea {
     color: #23395B;
     border: none;
     resize: none;
-    box-shadow: rgba(35, 57, 91, 0.19) 3px 10px 20px, rgba(35, 57, 91, 0.19) 3px 6px 6px;
+    box-shadow: rgba(35, 57, 91, 0.19) 0px 10px 20px, rgba(35, 57, 91, 0.19) 0px 6px 6px;
     /* background-image: url(./assets/dotted-grid.png); */
     /* background-position: center; */
 }
-.star {
-    color: #23395B;
-    position: relative;
-    left: 8%;
-}
+
 textarea:placeholder-shown {
     font-style: italic;
     padding-top: 15px;
@@ -225,6 +222,13 @@ textarea:placeholder-shown {
     padding-top: 40px;
     /* font-size: 1.2rem; */
 }
+
+footer {
+    text-align: center;
+}
+footer p {
+    margin: 5px;
+}
 .dark-mode {
     background-color: #23395B;
     color: #EAE5E9;
@@ -237,10 +241,17 @@ textarea:placeholder-shown {
     color: white;
     box-shadow: rgba(2, 6, 12, 0.50) 3px 0px 20px,
     rgba(35, 57, 91, 0.50) 3px 0px 6px;
+    
 }
 .dark-mode input {
     background: #23395B;
     color: white;
+    box-shadow: rgba(2, 6, 12, 0.50) 3px 0px 20px,
+    rgba(35, 57, 91, 0.50) 3px 0px 6px;
+}
+.dark-mode input:focus,
+.dark-mode textarea:focus {
+    outline: 1px solid rgba(234, 229, 233, 0.29) ;
 }
 .dark-mode .star {
     color: #EAE5E9;
