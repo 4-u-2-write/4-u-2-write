@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
     <footer>
-      <p>Created at <a href="https://junocollege.com/">JUNO</a>  College</p>
-      <p>By T. Fust, T. Manan, C. Sheldrick, and M. Creighton</p>
+      <p>Created at <span><a href="https://junocollege.com/">Juno College</a></span></p>
+      <p>Crafted by <span>Corey</span>, <span>Michael</span>, <span>Taz</span>, and <span>Tiff</span></p>
     </footer>
   )
 }

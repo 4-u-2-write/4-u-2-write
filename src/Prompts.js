@@ -1,7 +1,6 @@
 import firebase from "./firebase";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faStar } from '@fortawesome/free-regular-svg-icons';
 import { faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -61,25 +60,24 @@ const Prompts = () => {
       <div className="promptsFlex">
       <form className="promptForm">
         <label htmlFor="newPrompt">
-          {/* <FontAwesomeIcon className='star' icon ={faStar} /> */}
             <input 
               type="text" 
               id="newPrompt"
               className="newPrompt"
-              placeholder="Submit a community prompt!" 
+              placeholder="Spark an idea for a fellow user!" 
               onChange={handlePromptChange}
               value={userPromptInput}
             />
           </label>
-        <button type="submit" onClick={handlePromptClick}>Add a prompt</button>
+        <button type="submit" onClick={handlePromptClick}>Share Prompt</button>
         </form>
         <div className="promptsRequest">
           <
-            FontAwesomeIcon 
+          FontAwesomeIcon 
           className='icons sync' 
           icon={faSyncAlt} 
           onClick={randomizer} 
-          title="Need a writing prompt?"
+          title="Looking for inspiration? Click for a writing prompt"
           />
 
           <p>{displayPrompt}   &nbsp; </p>
