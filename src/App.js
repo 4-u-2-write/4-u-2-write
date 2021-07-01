@@ -6,7 +6,7 @@ import Timers from './Timer';
 import { TimeForm } from './Timer';
 import {useState} from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-
+import Footer from './Footer';
 
 
 function App() {
@@ -33,25 +33,30 @@ const [userEntryInput, setUserEntryInput] = useState('');
         </nav>
     
         <div className="divContainer">
-          <Route exact path="/prompts/" component={Prompts} />
-          <Route exact path="/timers/" component = {props => <TimeForm handleSubmit={handleSubmit} />} />
-          <Route exact path="/timers/" component = {props => <Timers userChoice={selected} />} />
-        </div>
+          <div className="toolkitContainer">
+            <Route exact path="/prompts/" component={Prompts} />
+            <Route exact path="/timers/" component = {props => <TimeForm handleSubmit={handleSubmit} />} />
+            <Route exact path="/timers/" component = {props => <Timers userChoice={selected} />} />
+          </div>
 
-        <div className="entryContainer">
-          <form className="textBox">
-            <textarea
-              id="story" name="story"
-              placeholder='"The scariest moment is always just before you start..."'
-              rows="25" cols="75"
-              onChange={handleEntryChange}
-              value={userEntryInput}
-            >
-            </textarea>
-          </form>
+          <div className="entryContainer">
+            <form className="textBox">
+              <textarea
+                id="story" name="story"
+                placeholder='"The scariest moment is always just before you start..."'
+                rows="25" cols="75"
+                onChange={handleEntryChange}
+                value={userEntryInput}
+              >
+              </textarea>
+            </form>
+          </div>
+        <footer>
+          <Footer />
+        </footer>
         </div>
-        
       </div>
+      
     </Router>
   );
 }
