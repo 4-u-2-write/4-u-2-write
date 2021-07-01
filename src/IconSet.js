@@ -8,7 +8,7 @@ const IconSet = (props) => {
 
   const toggleMode = () => {
     const element = document.body;
-    element.classList.toggle("dark-mode");
+    element.classList.toggle("darkMode");
   }
 
   const pushToFirebase = () => {

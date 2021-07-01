@@ -9,11 +9,6 @@ html {
     font-size: 125%;
 }
 
-.wrapper {
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
 img {
     display: block;
     max-width: 100%;
@@ -21,7 +16,6 @@ img {
 
 body {
     max-width: 1600px;
-    margin: 0 auto;
     background-color: #EAE5E9;
     font-family: 'Lato', sans-serif;
 }
@@ -37,6 +31,10 @@ a {
 
 h1 {
     color: #23395B;
+}
+
+p span {
+    font-weight: 700;
 }
 /* end general styles */
 
@@ -56,7 +54,7 @@ nav {
 .slidingIcons {
     position: fixed;
     right: -150px;
-    top: 185px;
+    top: 195px;
     transition: all 0.3s ease-out;
     transform: rotate(90deg);
     color: #23395B;
@@ -72,6 +70,7 @@ nav {
 
 label[for="toggleMenu"] {
     position: fixed;
+    font-size: 1.1rem;
     top: 47px;
     right: 45px;
     color: #23395B;
@@ -106,39 +105,29 @@ textarea:focus {
     outline: 1px solid rgba(35, 57, 91, 0.1);
 }
 
-.text-box {
-    display: flex;
-    justify-content: center;
-    margin-top: 7%;
-    width: 100%;
-} 
-
 .divContainer {
     padding: 40px;
 }
 
-/* .toolkitContainer {
-    height: 28vh;
-} */
+.textBox {
+    margin: 0 auto;
+}
 
 /* entryContainer styles */
 textarea {
     font-size: 0.9rem;
-    width: 70%;
-    padding: 22px 0 0 15px;
+    width: 75%;
+    padding: 18px 0 0 15px;
     max-width: 100%;
     line-height: 1.5;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     color: #23395B;
     border: none;
     resize: none;
     box-shadow: rgba(35, 57, 91, 0.19) 0px 10px 20px, rgba(35, 57, 91, 0.19) 0px 6px 6px;
-    /* background-image: url(./assets/dotted-grid.png); */
-    /* background-position: center; */
-    box-shadow: rgba(35, 57, 91, 0.19) 3px 10px 20px, rgba(35, 57, 91, 0.19) 3px 6px 6px;
     background-image: url(./assets/dotted-grid2.png);
     background-position: center;
-    transition: all 0.3s ease-out;
+    transition: all 0.15s ease-in;
 }
 
 textarea:placeholder-shown {
@@ -173,7 +162,7 @@ textarea:placeholder-shown {
 }
 
 .edit {
-    padding: 3.5px 0;
+    padding: 4px 0;
     position: relative;
     bottom: 17px;
     right: 1px;
@@ -235,7 +224,6 @@ textarea:placeholder-shown {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding-bottom: 20px; */
 }
 
 .promptsRequest {
@@ -278,32 +266,36 @@ textarea:placeholder-shown {
     border: none;
     cursor: pointer;
 }
-/* .promptsRequest p {
-    margin-top: 5px;
-} */
-.promptsRequest {
-    padding-top: 40px;
-    /* font-size: 1.2rem; */
-}
 
+/* footer styles */
 footer {
     text-align: center;
 }
+
 footer p {
     margin: 5px;
 }
 
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #78CAD2;
+}
+/* end footer styles */
+
 /* dark mode styles */
-.dark-mode {
+.darkMode {
     background-color: #23395B;
     color: #EAE5E9;
 }
 
-.dark-mode .icons {
+.darkMode .icons {
     color: #EAE5E9;
 }
 
-.dark-mode textarea {
+.darkMode textarea {
     background-color: #23395B;
     color: white;
     box-shadow: rgba(2, 6, 12, 0.50) 3px 0px 20px,
@@ -311,34 +303,61 @@ footer p {
     
 }
 
-.dark-mode input {
+.darkMode input {
     background: #23395B;
     color: white;
     box-shadow: rgba(2, 6, 12, 0.50) 3px 0px 20px,
     rgba(35, 57, 91, 0.50) 3px 0px 6px;
 }
-.dark-mode input:focus,
-.dark-mode textarea:focus {
+.darkMode input:focus,
+.darkMode textarea:focus {
     outline: 1px solid rgba(234, 229, 233, 0.29) ;
 }
 
-.dark-mode label[for="toggleMenu"] {
+.darkMode label[for="toggleMenu"] {
     color: white;
+}
+
+.darkMode label[for="toggleMenu"]:hover,
+.darkMode label[for="toggleMenu"]:focus {
+    color: #78CAD2;
 }
 /* end dark mode styles */
 
 /* responsive design styles */
 @media (max-width: 1028px) {
     label[for="toggleMenu"] {
-        top: 8%;
+        top: 40px;
         right: 10px;
         font-size: 1rem;
     }
     #toggleMenu:checked+.slidingIcons {
         right: -60px;
     }
-    .slidingIcons {
-        top: 165px;
+    .dropBtn {
+        height: 40px;
+        padding: 0 20px;
+    }
+    #timeSelect {
+        height: 40px;
+    }
+    .timerCount {
+    margin: 49px;
+    text-align: center;
+    font-size: 1.5rem;
+    }
+    .promptForm input {
+        height: 40px;
+    }
+    .promptForm button {
+        height: 40px;
+        padding: 0 20px;
+    }
+    .sync {
+        font-size: 1.2;
+    }
+    .promptsRequest {
+        padding: 25px 0;
     }
     textarea {
         width: 80%;
@@ -347,15 +366,13 @@ footer p {
 
 @media (max-width: 800px) {
     .logoContainer {
-        width: 50%;
+        width: 40%;
     }
     .promptForm button {
         padding: 5px 8px;
         font-size: 0.8rem;
     }
     label[for="toggleMenu"] {
-        top: 45px;
-        right: 10px;
         font-size: 1.05rem;
     }
     .page {
@@ -375,11 +392,15 @@ footer p {
     }
     .entryContainer {
         width: 95%;
-        margin-left: 2%;
-        /* margin-top: 8%; */
+        margin: 0 auto;
     }
     .dropBtn {
         padding: 8px;
+        font-size: 0.8rem;
+    }
+    #timeSelect {
+        font-size: 0.8rem;
+        text-align: center;
     }
     input {
         height: 40px;
@@ -388,20 +409,19 @@ footer p {
 }
 
 @media (max-width: 660px) {
-    input {
-        width: 250px
-    }
     label[for="toggleMenu"] {
-        top: 40px;
-        font-size: 0.8rem;
+        top: 35px;
+    }
+    .slidingIcons{
+        top: 187px;
     }
     .page {
         padding: 6px;
-        right: 7px;
+        right: 8px;
     }
     .clock {
         padding: 8px;
-        right: 7px;
+        left: -8px;
     }
     .edit {
         padding: 8px;
@@ -412,9 +432,76 @@ footer p {
         left: -25px;
     }
     .save {
-        padding: 7px;
+        padding:6px;
         left: -29px;
     }
+    .promptForm input {
+        width: 235px;
+    }
+    .sync {
+        font-size: 1.2rem;
+    }
+    .promptsRequest {
+        padding: 25px 0 20px 0;
+    }
+    .timerCount {
+        margin: 44px;
+    }
 }
-/* @media (max-height: 540px) {
-} */
+
+@media (max-width: 320px) {
+    .logoContainer {
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 50%;
+    }
+    label[for="toggleMenu"] {
+        top: 15px;
+        font-size: 0.8rem;
+    }
+    .slidingIcons{
+        top: 160px;
+    }
+    page {
+        padding: 7px;
+    }
+    .clock {
+        padding: 9px;
+    }
+    .edit {
+        padding: 9px;
+    }
+    .adjust {
+        padding: 9px;
+    }
+    .save {
+        padding:7px;
+    }
+    .toolkitContainer form {
+        flex-direction: column;
+    }
+    textarea {
+        width: 90%;
+    }
+    .dropBtn,
+    .promptForm button {
+        margin-left: 0;
+    }
+    .timeForm {
+        width: 140px;
+    }
+    .toolkitContainer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .promptForm {
+        width: 140px;
+    }
+    .promptForm input{
+        width: 140px;
+    }
+    .promptForm input::placeholder{
+        text-overflow:ellipsis;
+    }
+}

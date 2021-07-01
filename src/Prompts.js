@@ -80,11 +80,7 @@ const Prompts = () => {
           title="Looking for inspiration? Click for a writing prompt"
           />
 
-<<<<<<< Updated upstream
           <p>{displayPrompt}   &nbsp; </p>
-=======
-          <p>{displayPrompt} &nbsp;</p>
->>>>>>> Stashed changes
 
         </div>
     </div>
