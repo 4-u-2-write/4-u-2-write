@@ -45,11 +45,11 @@ const [buttonClicked, setButtonClicked] = useState(false);
         clearTimeout(typingTimer);
       }
     }
-  }, [userEntryInput])
+  }, [userEntryInput, buttonClicked])
 
   useEffect(() => {
     let alertTimer = null;
-    if (finished != '') {
+    if (finished !== '') {
       alertTimer = setTimeout(() => {
           alert('Keep Writing!')
       }, 10000);
