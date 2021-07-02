@@ -18,7 +18,7 @@ const IconSet = (props) => {
     if (userEntry !== "") {
       const dbRefEntries = firebase.database().ref('/Entries');
       dbRefEntries.push(userEntry);
-      prompt("It's saved — great work! Title your entry.");
+      // prompt("It's saved — great work! Title your entry.");
     }
   }
 

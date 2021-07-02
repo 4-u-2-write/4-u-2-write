@@ -37,7 +37,7 @@ const TimeForm = (props) => {
                 <option value="1800">30 minutes</option>
                 <option value="2400">40 minutes</option>
             </select>
-            <button className="dropBtn" type="submit" name="submit" value="submit" onClick={props.startTiming}>Start Timer</button>
+            <button className="dropBtn" type="submit" name="submit" value="submit" onClick={props.startTiming()}>Start Timer</button>
         </form>
     )
 }
