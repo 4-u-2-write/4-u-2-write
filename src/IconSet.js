@@ -11,11 +11,6 @@ const IconSet = (props) => {
     element.classList.toggle("darkMode");
   }
 
-const checkIfEnter = (e) => {
-  if (e.key === 'Enter') {
-    toggleMode();
-  }
-}
 
 // pushes user textarea input to firebase when save icon is clicked
   const pushToFirebase = () => {
@@ -42,9 +37,7 @@ const checkIfEnter = (e) => {
         <Link to={`/prompts/`}>
           <FontAwesomeIcon className='edit fa-rotate-270' size='2x' icon={faEdit} title='Prompt Toolbar' />
         </Link>
-        <a>
           <FontAwesomeIcon className='adjust fa-rotate-270' size='2x' icon={faAdjust} onClick={toggleMode} onKeyPress={(e) => {if (e.key === 'Enter') {toggleMode();}}} tabIndex="0" title='Light/Dark Mode'/>
-        </a>
         
           <FontAwesomeIcon className='save fa-rotate-270' size='2x' icon={faSave} onClick={pushToFirebase} onKeyPress={(e) => {if (e.key === 'Enter') {pushToFirebase();}}} tabIndex="0" title='Save Entry'/>
         

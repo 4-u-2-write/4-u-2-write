@@ -46,7 +46,7 @@ let buttonClicked = false;
         clearTimeout(typingTimer);
       }
     }
-  }, [userEntryInput])
+  }, [userEntryInput, buttonClicked])
 
   useEffect(() => {
     let alertTimer = null;
