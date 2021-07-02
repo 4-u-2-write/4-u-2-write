@@ -125,7 +125,7 @@ textarea {
     border: none;
     resize: none;
     box-shadow: rgba(35, 57, 91, 0.19) 0px 10px 20px, rgba(35, 57, 91, 0.19) 0px 6px 6px;
-    background-image: url(./assets/dotted-grid2.png);
+    background-image: url(./assets/dotted-grid-light.png);
     background-position: center;
     transition: all 0.15s ease-in;
 }
@@ -274,6 +274,7 @@ footer {
 
 footer p {
     margin: 5px;
+    letter-spacing: 1px;
 }
 
 footer a {
@@ -300,7 +301,7 @@ footer a:hover {
     color: white;
     box-shadow: rgba(2, 6, 12, 0.50) 3px 0px 20px,
     rgba(35, 57, 91, 0.50) 3px 0px 6px;
-    
+    background-image: url(./assets/dotted-grid-dark.png);
 }
 
 .darkMode input {
@@ -445,7 +446,53 @@ footer a:hover {
         padding: 25px 0 20px 0;
     }
     .timerCount {
-        margin: 44px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 44px 0;
+    }
+}
+
+@media (max-width: 414px) {
+    .logoContainer {
+        width: 50%;
+    }
+    label[for="toggleMenu"] {
+        top: 30px;
+        font-size: 0.9rem;
+    }
+    .slidingIcons{
+        top: 180px;
+    }
+    textarea {
+        width: 90%;
+    }
+    .toolkitContainer form {
+        flex-direction: column;
+    }
+    .dropBtn,
+    .promptForm button {
+        margin-left: 0;
+    }
+    .dropBtn,
+    .promptForm button {
+        margin-left: 0;
+    }
+    .timeForm {
+        width: 140px;
+    }
+    .toolkitContainer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .promptForm {
+        width: 140px;
+    }
+    .promptForm input{
+        width: 140px;
+    }
+    .promptForm input::placeholder{
+        text-overflow:ellipsis;
     }
 }
 
@@ -453,7 +500,6 @@ footer a:hover {
     .logoContainer {
         margin-top: 10px;
         margin-left: 10px;
-        width: 50%;
     }
     label[for="toggleMenu"] {
         top: 15px;
@@ -476,32 +522,5 @@ footer a:hover {
     }
     .save {
         padding:7px;
-    }
-    .toolkitContainer form {
-        flex-direction: column;
-    }
-    textarea {
-        width: 90%;
-    }
-    .dropBtn,
-    .promptForm button {
-        margin-left: 0;
-    }
-    .timeForm {
-        width: 140px;
-    }
-    .toolkitContainer {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .promptForm {
-        width: 140px;
-    }
-    .promptForm input{
-        width: 140px;
-    }
-    .promptForm input::placeholder{
-        text-overflow:ellipsis;
     }
 }
