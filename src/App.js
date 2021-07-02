@@ -4,7 +4,7 @@ import Prompts from './Prompts';
 import IconSet from './IconSet';
 import Timers from './Timer';
 import { TimeForm } from './Timer';
-import {useEffect, useState, useRef} from 'react';
+import {useEffect, useState} from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Footer from './Footer';
 

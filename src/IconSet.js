@@ -36,12 +36,12 @@ const IconSet = (props) => {
         <Link to={`/prompts/`}>
           <FontAwesomeIcon className='edit fa-rotate-270' size='2x' icon={faEdit} title='Prompt Toolbar' />
         </Link>
-        <Link>
+        
           <FontAwesomeIcon className='adjust fa-rotate-270' size='2x' icon={faAdjust} onClick={toggleMode} title='Light/Dark Mode'/>
-        </Link>
-        <Link>
+        
+        
           <FontAwesomeIcon className='save fa-rotate-270' size='2x' icon={faSave} onClick={pushToFirebase} title='Save Entry'/>
-        </Link>
+        
       </div>
     </div>
   )
