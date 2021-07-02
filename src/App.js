@@ -35,10 +35,8 @@ const [buttonClicked, setButtonClicked] = useState(false);
 
 //timer that shows alert when user stops typing for 15 seconds
 
-  let typingTimer = null;
-  let alertTimer = null;
-
   useEffect(() => {
+    let typingTimer = null;
     if(buttonClicked === true) {
       typingTimer = setTimeout(() => {
           setFinished(userEntryInput);
@@ -50,6 +48,7 @@ const [buttonClicked, setButtonClicked] = useState(false);
   }, [userEntryInput])
 
   useEffect(() => {
+    let alertTimer = null;
     if (finished != '') {
       alertTimer = setTimeout(() => {
           alert('Keep Writing!')
