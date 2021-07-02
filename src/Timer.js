@@ -1,23 +1,26 @@
 import { useState } from "react";
-import { Timer } from "react-countdown-clock-timer";
+import { Timer } from 'react-countdown-clock-timer';
 
 
 const Timers = (props) => {
-    const timerTest = parseInt(props.userChoice);
 
+// gets the value of selected option from TimeForm
+    const timerLength = parseInt(props.userChoice);
+
+// countdown that uses user selected value
     return (
     <div className="timerCount">
-			<Timer
-			durationInSeconds={timerTest}
-			formatted={true}
-			isPaused={false}
-			showPauseButton={false}
-			showResetButton={false}/>
+        <Timer
+        durationInSeconds={timerLength}
+        formatted={true}
+        isPaused={false}
+        showPauseButton={false}
+        showResetButton={false}/>
     </div>
     )
 }
 
-
+// Form to let users select how long of a timer they want
 const TimeForm = (props) => {
     const [timeAmount, setTimeAmount] = useState("");
 
@@ -27,7 +30,6 @@ const TimeForm = (props) => {
 
     return (
         <form className="timeForm" onSubmit = {(e) => props.handleSubmit(e, timeAmount)}>
-					{/* <div className="dropdown"> */}
             <select required id="timeSelect" name="timeSelect"  value={timeAmount} onChange={updateTime}>
                 <option value="" disabled>Select option</option>
                 <option value="600">10 minutes</option>
@@ -35,8 +37,7 @@ const TimeForm = (props) => {
                 <option value="1800">30 minutes</option>
                 <option value="2400">40 minutes</option>
             </select>
-					{/* </div> */}
-					<button className="dropBtn" type="submit" name="submit" value="submit">Start Timer</button>
+            <button className="dropBtn" type="submit" name="submit" value="submit" onClick={props.startTiming}>Start Timer</button>
         </form>
     )
 }

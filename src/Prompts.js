@@ -15,7 +15,7 @@ const Prompts = () => {
       setUserPromptInput(e.target.value);
     }
 
-    // 2. click on button
+    // prevents default button behaviour
   const handlePromptClick = (e) => {
     e.preventDefault();
   // Check for empty input before adding to database
@@ -31,16 +31,13 @@ const Prompts = () => {
     const dbRefPrompts = firebase.database().ref('/Prompts');
 
     dbRefPrompts.on('value', (response) => {
-      // console.log(response.val());
       const newState = [];
-
       const promptData = response.val();
 
       for (let key in promptData) {
         newState.push(promptData[key]);
       }
       setPrompts(newState);
-      // console.log(newState);
     
     });
 
