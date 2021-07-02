@@ -52,14 +52,14 @@ let buttonClicked = false;
     let alertTimer = null;
     if (finished !== '') {
       alertTimer = setTimeout(() => {
-          alert('Keep Writing!')
+          alert("Don't lose your flow — keep writing, you got this!")
       }, 10000);
     };
     return () => {
       clearTimeout(alertTimer);
     }
   }, [finished])
-
+  
 //end timer
 
   
