@@ -5,12 +5,13 @@ import firebase from "./firebase";
 import { Link } from 'react-router-dom';
 
 const IconSet = (props) => {
-
+//toggles dark/light mode
   const toggleMode = () => {
     const element = document.body;
     element.classList.toggle("darkMode");
   }
 
+// pushes user textarea input to firebase when save icon is clicked
   const pushToFirebase = () => {
     const userEntry = props.userEntry;
     console.log(userEntry);

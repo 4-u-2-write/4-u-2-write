@@ -4,23 +4,64 @@ import Prompts from './Prompts';
 import IconSet from './IconSet';
 import Timers from './Timer';
 import { TimeForm } from './Timer';
-import {useState} from 'react';
+import {useEffect, useState, useRef} from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Footer from './Footer';
+
 
 
 function App() {
 const [selected, setSelected] = useState(0);
 const [userEntryInput, setUserEntryInput] = useState('');
+const [finished, setFinished] = useState('');
+const [buttonClicked, setButtonClicked] = useState(false);
 
+//gets value of selected option from TimeForm and prevents default behaviour of button
   const handleSubmit = (e, value) => {
     e.preventDefault();
     setSelected(value);
   }
 
+// updates user entry from textarea every time it changes
   const handleEntryChange = (e) => {
     setUserEntryInput(e.target.value);
+    
   }
+
+// sets buttonClicked to true when Timer Form button is clicked
+  const startTiming = () => {
+    setButtonClicked(true);
+  }
+
+//timer that shows alert when user stops typing for 15 seconds
+
+  let typingTimer = null;
+  let alertTimer = null;
+
+  useEffect(() => {
+    if(buttonClicked === true) {
+      typingTimer = setTimeout(() => {
+          setFinished(userEntryInput);
+      }, 5000);
+      return () => {
+        clearTimeout(typingTimer);
+      }
+    }
+  }, [userEntryInput])
+
+  useEffect(() => {
+    if (finished != '') {
+      alertTimer = setTimeout(() => {
+          alert('Keep Writing!')
+      }, 10000);
+    };
+    return () => {
+      clearTimeout(alertTimer);
+    }
+  }, [finished])
+
+//end timer
+
   
   return (
     <Router>
@@ -35,7 +76,7 @@ const [userEntryInput, setUserEntryInput] = useState('');
         <div className="divContainer">
           <div className="toolkitContainer">
             <Route exact path="/prompts/" component={Prompts} />
-            <Route exact path="/timers/" component = {props => <TimeForm handleSubmit={handleSubmit} />} />
+            <Route exact path="/timers/" component = {props => <TimeForm handleSubmit={handleSubmit} startTiming={startTiming}/>} />
             <Route exact path="/timers/" component = {props => <Timers userChoice={selected} />} />
           </div>
 
