@@ -15,13 +15,12 @@ const IconSet = (props) => {
 // pushes user textarea input to firebase when save icon is clicked
   const pushToFirebase = () => {
     const userEntry = props.userEntry;
-    console.log(userEntry);
-  if (userEntry !== "") {
+    if (userEntry !== "") {
       const dbRefEntries = firebase.database().ref('/Entries');
       dbRefEntries.push(userEntry);
+      prompt("It's saved — great work! Title your entry.");
     }
   }
-
 
   return (
     <div>
