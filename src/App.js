@@ -14,7 +14,6 @@ function App() {
 const [selected, setSelected] = useState(0);
 const [userEntryInput, setUserEntryInput] = useState('');
 const [finished, setFinished] = useState('');
-const [buttonClicked, setButtonClicked] = useState(false);
 
 //gets value of selected option from TimeForm and prevents default behaviour of button
   const handleSubmit = (e, value) => {
@@ -29,8 +28,10 @@ const [buttonClicked, setButtonClicked] = useState(false);
   }
 
 // sets buttonClicked to true when Timer Form button is clicked
+let buttonClicked = false;
+
   const startTiming = () => {
-    setButtonClicked(true);
+    buttonClicked = true;
   }
 
 //timer that shows alert when user stops typing for 15 seconds
@@ -45,7 +46,7 @@ const [buttonClicked, setButtonClicked] = useState(false);
         clearTimeout(typingTimer);
       }
     }
-  }, [userEntryInput, buttonClicked])
+  }, [userEntryInput])
 
   useEffect(() => {
     let alertTimer = null;
